@@ -4,7 +4,10 @@
     font-family: 'GFS Didot', serif;
     box-sizing: border-box;
 }
+.class-para-grid{
+    display: grid;
 
+}
 .barra_sup {
     background-color: lightslategray;
 }
@@ -25,12 +28,27 @@ h1 {
 }
 
 .banner {
-    width: 100%;
+    background-image: url("../img/banner.jpg");
+    background-size: cover;
+
+    height: 90vh;
+    width: auto;
+    background-position: center;
     border-style: solid;
     border-color: lightslategray;
     border-width: 1px;
 }
 
+main{
+    height:fit-content;
+}
+.contenedor-card{
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: 360px;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
 .contenedor_tarjetas {
     display: flex;
     align-items: center;
@@ -39,7 +57,10 @@ h1 {
     width: 100%;
 }
 
-.card{
+.card {
+    display: flex;
+    align-items: center;
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
     width: 250px;
@@ -47,12 +68,13 @@ h1 {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-.card_img{
+
+.card_img {
     max-height: 60%;
-    max-width: 100%;  
+    max-width: 100%;
 }
-.card img{
-    display: inline-block;
+
+.card img {
     max-width: 100%;
     max-height: 100%;
     height: auto;
@@ -60,13 +82,21 @@ h1 {
     margin-left: auto;
     margin-right: auto;
 }
-.card-body{
-    padding: auto;
-} 
 
-.carousel-item{
-    text-align: center;
+.card-body {
+    padding: auto;
 }
+.btn-primary{
+    background-color: lightslategray;
+}
+
+.carousel-control-prev-icon {
+    background-color: black;
+}
+.carousel-control-next-icon {
+    background-color: black;
+}
+
 footer {
     padding: 10px;
     background-color: lightslategray;
@@ -83,35 +113,43 @@ footer img {
     text-align: end;
     text-align: right;
 }
-.quienes{
+
+.quienes {
     height: 600px;
 }
-.quienes_cuerpo {
-    display: grid;
 
+.quienes_cuerpo {
+    padding: 1em;
+    display: grid;
+    grid-gap: 1em;
     grid-template-columns: 2fr 3fr;
     grid-template-rows: 1fr 4fr;
     grid-template-areas: "titulo linkdeubicacion" "texto iframe";
 }
 
-.quienes_titulo{
+.quienes_titulo {
     grid-area: titulo;
 }
 
-.quienes_linkdeubicacion{
+.quienes_linkdeubicacion {
     grid-area: linkdeubicacion;
 }
 
-.quienes_texto{
+.quienes_texto {
     grid-area: texto;
 }
 
-.quienes_iframe{
+.quienes_iframe {
     grid-area: iframe;
 }
+
 @media only screen and (min-width: 991px) {
-    .contenedor_tarjetas{
+    .banner {
+        background-image: url("../img/banner.jpg");
+    }
+    .contenedor_tarjetas {
         flex-wrap: wrap;
         flex-direction: row;
     }
+
 }
