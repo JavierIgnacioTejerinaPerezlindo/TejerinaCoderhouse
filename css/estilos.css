@@ -4,17 +4,17 @@
     font-family: 'GFS Didot', serif;
     box-sizing: border-box;
 }
- .class-para-grid{
+body{
 
     display: grid;
-    grid-template-columns: 100vw;
+    grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
     grid-template-areas: "header"
                         "main"
                     "footer";
 }
 header {
-    grid-area: header;
+    grid-area: header;  
 
 }
 .barra_sup {
@@ -35,12 +35,15 @@ h1 {
 .logo {
     width: 80%;
 }
+.banner{
+    display: none;
+}
 
-.banner {
-    background-image: url("../img/banner.jpg");
+.banner_index {
+    background-image: url("../img/banner_indexmobile.jpg");
     background-size: cover;
 
-    height: 90vh;
+    height: 85vh;
     width: auto;
     background-position: center;
     border-style: solid;
@@ -48,17 +51,68 @@ h1 {
     border-width: 1px;
 }
 
+.banner_mujeres {
+    background-image: url("../img/banner_mujermobile.jpg");
+    background-size: cover;
+
+    height: 85vh;
+    width: auto;
+    background-position: center;
+    border-style: solid;
+    border-color: lightslategray;
+    border-width: 1px;
+}
+
+.banner_hombres {
+    
+    background-image: url("../img/banner_hombremobile.jpg");
+    background-size: cover;
+
+    height: 85vh;
+    width: auto;
+    background-position: center;
+    border-style: solid;
+    border-color: lightslategray;
+    border-width: 1px;
+}
+
+.banner_niños{
+    background-image: url("../img/banner_niñosmobile.jpg");
+    background-size: cover;
+
+    height: 85vh;
+    width: auto;
+    background-position: center;
+    border-style: solid;
+    border-color: lightslategray;
+    border-width: 1px;
+}
+
+.banner_contactanos{
+    background-image: url("../img/banner_contactanosmobile.jpg");
+    background-size: cover;
+
+    height: 85vh;
+    width: auto;
+    background-position: center;
+    border-style: solid;
+    border-color: lightslategray;
+    border-width: 1px;
+}
 main {
     grid-area: main;
 }
 .contenedor-card{
-    background-color: aqua;
-   
     display: grid;
+    justify-items: center;
     width: 100%;
     gap: 1rem;
     grid-auto-rows: 360px;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.contenedor-card .card{
+    margin: 0px;
 }
 .contenedor_tarjetas {
     display: flex;
@@ -109,6 +163,7 @@ main {
 }
 
 footer {
+    margin-top: 30px;
     grid-area: footer;
     padding: 10px;
     background-color: lightslategray;
@@ -126,38 +181,95 @@ footer img {
     text-align: right;
 }
 
-.quienes {
-    height: 600px;
-}
-
-.quienes_cuerpo {
-    padding: 1em;
+.grid_quienes {
     display: grid;
-    grid-gap: 1em;
-    grid-template-columns: 2fr 3fr;
-    grid-template-rows: 1fr 4fr;
-    grid-template-areas: "titulo linkdeubicacion" "texto iframe";
-}
+    grid-gap: 0.5em;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "h h h h h h h h h h h h"
+                         "m m m m m m m m m m m m"
+                         "f f f f f f f f f f f f"
 
-.quienes_titulo {
-    grid-area: titulo;
 }
-
-.quienes_linkdeubicacion {
-    grid-area: linkdeubicacion;
+header{
+    grid-area: h;
+    display: grid;
+    grid-gap: 0.5em;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "b b b b b b b b b b b b"
+                         ". . l l l l l l l l . ."
+                         "ba ba ba ba ba ba ba ba ba ba ba ba"
+                         "bb bb bb bb bb bb bb bb bb bb bb bb"
+                         "n n n n n n n n n n n n";
 }
-
-.quienes_texto {
-    grid-area: texto;
+.barra_sup{
+    grid-area: b;
 }
-
+.logo_quienes{
+    grid-area: l;
+    width: 100%;
+}
+.banner_quienes1 {
+    grid-area: ba;
+    width: 100%;
+}
+.banner_quienes2{
+    grid-area: bb;
+    width: 100%;
+}
+nav{
+grid-area: n;
+}
+.quienes {
+    grid-area: m;
+    display: grid;
+    gap: 0.5em;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: ". ti ti ti ti ti ti ti ti ti ti ."
+                         ". . te te te te te te te te . ."
+                         ". . . . . li li . . . . . "
+                         "if if if if if if if if if if if if ";
+}
+.quienes_titulo{
+    grid-area: ti;
+}
+.quienes_texto{
+    grid-area: te;
+}
+.quienes_linkdeubicacion{
+    grid-area: li;
+}
 .quienes_iframe {
-    grid-area: iframe;
+    grid-area: if;
+}
+.quienes_footer{
+    grid-area: f;
 }
 
 @media only screen and (min-width: 991px) {
-    .banner {
-        background-image: url("../img/banner.jpg");
+    .logo{
+        width: 40%;
+    }
+    .banner{
+        display: block;
+        width: 100%;
+    }
+    .banner_hombres{
+        height: auto;
+    }
+    .banner_index {
+        height: auto;
+    }
+    .banner_mujeres{
+        height: auto;
+    }
+    .banner_niños{
+        height: auto;
+    }
+    .banner_contactanos{
+        height: auto;
     }
     .contenedor_tarjetas {
         flex-wrap: wrap;
