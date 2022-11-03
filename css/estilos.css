@@ -238,7 +238,8 @@ grid-area: n;
 .quienes_texto{
     grid-area: te;
 }
-.quienes_linkdeubicacion{
+.quienes_linkubicacion{
+    display:block;
     grid-area: li;
 }
 .quienes_iframe {
@@ -275,5 +276,17 @@ grid-area: n;
         flex-wrap: wrap;
         flex-direction: row;
     }
-
+.quienes{
+    grid-template-areas: " . ti ti ti ti ti ti li li . . . "
+                             " . ti ti ti ti ti ti li li . . . "
+                             " . te te te te te te if if if if . "
+                             " . te te te te te te if if if if . ";
+}
+header{
+    grid-template-areas: "b b b b b b b b b b b b"
+                         ". . . l l l l l l . . ."
+                        ". . . ba ba ba ba ba ba . . . "
+                        ". . .  bb bb bb bb bb bb . . . "
+                        "n n n n n n n n n n n n";
+}
 }
