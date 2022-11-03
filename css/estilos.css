@@ -191,7 +191,7 @@ footer img {
                          "f f f f f f f f f f f f"
 
 }
-header{
+.header_quienes{
     grid-area: h;
     display: grid;
     grid-gap: 0.5em;
@@ -282,7 +282,7 @@ grid-area: n;
                              " . te te te te te te if if if if . "
                              " . te te te te te te if if if if . ";
 }
-header{
+.header_quienes{
     grid-template-areas: "b b b b b b b b b b b b"
                          ". . . l l l l l l . . ."
                         ". . . ba ba ba ba ba ba . . . "
