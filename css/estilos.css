@@ -4,19 +4,22 @@
     font-family: 'GFS Didot', serif;
     box-sizing: border-box;
 }
-body{
+
+body {
 
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
     grid-template-areas: "header"
-                        "main"
-                    "footer";
+        "main"
+        "footer";
 }
+
 header {
-    grid-area: header;  
+    grid-area: header;
 
 }
+
 .barra_sup {
     background-color: lightslategray;
 }
@@ -35,7 +38,8 @@ h1 {
 .logo {
     width: 80%;
 }
-.banner{
+
+.banner {
     display: none;
 }
 
@@ -64,7 +68,7 @@ h1 {
 }
 
 .banner_hombres {
-    
+
     background-image: url("../img/banner_hombremobile.jpg");
     background-size: cover;
 
@@ -76,7 +80,7 @@ h1 {
     border-width: 1px;
 }
 
-.banner_niños{
+.banner_niños {
     background-image: url("../img/banner_niñosmobile.jpg");
     background-size: cover;
 
@@ -88,7 +92,7 @@ h1 {
     border-width: 1px;
 }
 
-.banner_contactanos{
+.banner_contactanos {
     background-image: url("../img/banner_contactanosmobile.jpg");
     background-size: cover;
 
@@ -99,10 +103,12 @@ h1 {
     border-color: lightslategray;
     border-width: 1px;
 }
+
 main {
     grid-area: main;
 }
-.contenedor-card{
+
+.contenedor-card {
     display: grid;
     justify-items: center;
     width: 100%;
@@ -111,9 +117,10 @@ main {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
 
-.contenedor-card .card{
+.contenedor-card .card {
     margin: 0px;
 }
+
 .contenedor_tarjetas {
     display: flex;
     align-items: center;
@@ -137,6 +144,7 @@ main {
 .card_img {
     max-height: 60%;
     max-width: 100%;
+    overflow: hidden;
 }
 
 .card img {
@@ -146,20 +154,38 @@ main {
     width: auto;
     margin-left: auto;
     margin-right: auto;
+    -webkit-transition: all .9s ease;
+    /* Safari y Chrome */
+    -moz-transition: all .9s ease;
+    /* Firefox */
+    -o-transition: all .9s ease;
+    /* IE 9 */
+    -ms-transition: all .9s ease;
+    /* Opera */
+}
+
+.card:hover img {
+    -webkit-transform: scale(1.25);
+    -moz-transform: scale(1.25);
+    -ms-transform: scale(1.25);
+    -o-transform: scale(1.25);
+    transform: scale(1.25);
 }
 
 .card-body {
     padding: auto;
 }
-.btn-primary{
+
+.btn-primary {
     background-color: lightslategray;
 }
 
 .carousel-control-prev-icon {
-    background-color: black;
+    background-color: gray;
 }
+
 .carousel-control-next-icon {
-    background-color: black;
+    background-color: gray;
 }
 
 footer {
@@ -180,6 +206,9 @@ footer img {
     text-align: end;
     text-align: right;
 }
+footer h5{
+    font-size: small;
+}
 
 .grid_quienes {
     display: grid;
@@ -187,40 +216,47 @@ footer img {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(3, auto);
     grid-template-areas: "h h h h h h h h h h h h"
-                         "m m m m m m m m m m m m"
-                         "f f f f f f f f f f f f"
+        "m m m m m m m m m m m m"
+        "f f f f f f f f f f f f"
 
 }
-.header_quienes{
+
+.header_quienes {
     grid-area: h;
     display: grid;
     grid-gap: 0.5em;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(5, auto);
     grid-template-areas: "b b b b b b b b b b b b"
-                         ". . l l l l l l l l . ."
-                         "ba ba ba ba ba ba ba ba ba ba ba ba"
-                         "bb bb bb bb bb bb bb bb bb bb bb bb"
-                         "n n n n n n n n n n n n";
+        ". . l l l l l l l l . ."
+        "ba ba ba ba ba ba ba ba ba ba ba ba"
+        "bb bb bb bb bb bb bb bb bb bb bb bb"
+        "n n n n n n n n n n n n";
 }
-.barra_sup{
+
+.barra_sup {
     grid-area: b;
 }
-.logo_quienes{
+
+.logo_quienes {
     grid-area: l;
     width: 100%;
 }
+
 .banner_quienes1 {
     grid-area: ba;
     width: 100%;
 }
-.banner_quienes2{
+
+.banner_quienes2 {
     grid-area: bb;
     width: 100%;
 }
-nav{
-grid-area: n;
+
+nav {
+    grid-area: n;
 }
+
 .quienes {
     grid-area: m;
     display: grid;
@@ -228,65 +264,86 @@ grid-area: n;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(4, auto);
     grid-template-areas: ". ti ti ti ti ti ti ti ti ti ti ."
-                         ". . te te te te te te te te . ."
-                         ". . . . . li li . . . . . "
-                         "if if if if if if if if if if if if ";
+        ". . te te te te te te te te . ."
+        ". . . . . li li . . . . . "
+        "if if if if if if if if if if if if ";
 }
-.quienes_titulo{
+
+.quienes_titulo {
     grid-area: ti;
 }
-.quienes_texto{
+
+.quienes_texto {
     grid-area: te;
 }
-.quienes_linkubicacion{
-    display:block;
+
+.quienes_linkubicacion {
+    display: block;
     grid-area: li;
 }
+
 .quienes_iframe {
     grid-area: if;
 }
-.quienes_footer{
+
+.quienes_footer {
     grid-area: f;
 }
 
+
+
 @media only screen and (min-width: 991px) {
-    .logo{
+    .logo {
         width: 40%;
     }
-    .banner{
+
+    .banner {
         display: block;
         width: 100%;
     }
-    .banner_hombres{
+
+    .banner_hombres {
         height: auto;
     }
+
     .banner_index {
         height: auto;
     }
-    .banner_mujeres{
+
+    .banner_mujeres {
         height: auto;
     }
-    .banner_niños{
+
+    .banner_niños {
         height: auto;
     }
-    .banner_contactanos{
+
+    .banner_contactanos {
         height: auto;
     }
+
     .contenedor_tarjetas {
         flex-wrap: wrap;
         flex-direction: row;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
-.quienes{
-    grid-template-areas: " . ti ti ti ti ti ti li li . . . "
-                             " . ti ti ti ti ti ti li li . . . "
-                             " . te te te te te te if if if if . "
-                             " . te te te te te te if if if if . ";
-}
-.header_quienes{
-    grid-template-areas: "b b b b b b b b b b b b"
-                         ". . . l l l l l l . . ."
-                        ". . . ba ba ba ba ba ba . . . "
-                        ". . .  bb bb bb bb bb bb . . . "
-                        "n n n n n n n n n n n n";
-}
+    .contenedor_card{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .quienes {
+        grid-template-areas: " . ti ti ti ti ti ti li li . . . "
+            " . ti ti ti ti ti ti li li . . . "
+            " . te te te te te te if if if if . "
+            " . te te te te te te if if if if . ";
+    }
+
+    .header_quienes {
+        grid-template-areas: "b b b b b b b b b b b b"
+            ". . . l l l l l l . . ."
+            "ba ba ba ba ba ba bb bb bb bb bb bb"
+            "ba ba ba ba ba ba bb bb bb bb bb bb"
+            "n n n n n n n n n n n n";
+    }
 }
