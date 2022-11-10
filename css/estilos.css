@@ -20,22 +20,22 @@ header {
 
 }
 
-.barra_sup {
+.header__barra {
     background-color: lightslategray;
 }
 
-h1 {
+.header__barra__text {
     font-size: 15px;
     color: white;
     text-align: center;
 }
 
-.contenedor_de_logo {
+.header__contenedorlogo {
     width: 100%;
     text-align: center;
 }
 
-.logo {
+.header__contenedorlogo__logo {
     width: 80%;
 }
 
@@ -293,7 +293,7 @@ nav {
 
 
 @media only screen and (min-width: 991px) {
-    .logo {
+    .header__contenedorlogo__logo {
         width: 40%;
     }
 
