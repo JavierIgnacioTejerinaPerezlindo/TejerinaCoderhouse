@@ -36,79 +36,53 @@ body footer h5 {
 .header__barra {
   background-color: lightslategray;
 }
-
-.header__barra__text {
+.header__text {
   font-size: 15px;
   color: white;
   text-align: center;
 }
-
 .header__contenedorlogo {
   width: 100%;
   text-align: center;
 }
-
-.header__contenedorlogo__logo {
+.header__logo {
   width: 80%;
+}
+.header__contenedorbanner {
+  background-size: cover;
+  height: 85vh;
+  width: auto;
+  background-position: center;
+  border-style: solid;
+  border-color: lightslategray;
+  border-width: 1px;
+}
+.header__banner {
+  display: none;
 }
 
 .banner {
   display: none;
 }
 
-.header__bannerindex {
+.index {
   background-image: url("../img/banner_indexmobile.jpg");
-  background-size: cover;
-  height: 85vh;
-  width: auto;
-  background-position: center;
-  border-style: solid;
-  border-color: lightslategray;
-  border-width: 1px;
 }
 
-.header__bannermujeres {
+.mujeres {
   background-image: url("../img/banner_mujermobile.jpg");
-  background-size: cover;
-  height: 85vh;
-  width: auto;
-  background-position: center;
-  border-style: solid;
-  border-color: lightslategray;
-  border-width: 1px;
 }
 
-.header__bannerhombres {
+.hombres {
   background-image: url("../img/banner_hombremobile.jpg");
-  background-size: cover;
-  height: 85vh;
-  width: auto;
-  background-position: center;
-  border-style: solid;
-  border-color: lightslategray;
-  border-width: 1px;
 }
 
-.header__bannerniños {
+.niños {
   background-image: url("../img/banner_niñosmobile.jpg");
-  background-size: cover;
-  height: 85vh;
-  width: auto;
-  background-position: center;
-  border-style: solid;
-  border-color: lightslategray;
-  border-width: 1px;
 }
 
-.header__bannercontactanos {
+.contactanos {
   background-image: url("../img/banner_contactanosmobile.jpg");
-  background-size: cover;
-  height: 85vh;
-  width: auto;
-  background-position: center;
-  border-style: solid;
-  border-color: lightslategray;
-  border-width: 1px;
 }
 
 .contenedor-card {
@@ -142,6 +116,7 @@ body footer h5 {
   height: 360px;
   margin-top: 10px;
   margin-bottom: 10px;
+  box-shadow: 10px 10px 5px -3px rgba(0, 0, 0, 0.75);
 }
 
 .card_img {
@@ -239,7 +214,7 @@ nav {
   gap: 0.5em;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(4, auto);
-  grid-template-areas: ". ti ti ti ti ti ti ti ti ti ti ." ". . te te te te te te te te . ." ". . . . . li li . . . . . " "if if if if if if if if if if if if ";
+  grid-template-areas: ". ti ti ti ti ti ti ti ti ti ti ." ". . te te te te te te te te . ." ". . . . . li li . . . . . " ". if if if if if if if if if if . ";
 }
 
 .quienes_titulo {
@@ -263,27 +238,19 @@ nav {
   grid-area: f;
 }
 
+.barranav {
+  background: linear-gradient(lightslategray, white);
+}
+
 @media only screen and (min-width: 991px) {
-  .header__contenedorlogo__logo {
+  .header__logo {
     width: 40%;
   }
-  .banner {
+  .header__banner {
     display: block;
     width: 100%;
   }
-  .header__bannerhombres {
-    height: auto;
-  }
-  .header__bannerindex {
-    height: auto;
-  }
-  .header__bannermujeres {
-    height: auto;
-  }
-  .header__bannerniños {
-    height: auto;
-  }
-  .header__bannercontactanos {
+  .header__contenedorbanner {
     height: auto;
   }
   .contenedor_tarjetas {

@@ -46,88 +46,66 @@ body {
     }
 }
 
-.header__barra {
-    background-color: lightslategray;
+.header {
+    &__barra {
+        background-color: lightslategray;
+    }
+
+    &__text {
+        font-size: 15px;
+        color: white;
+        text-align: center;
+    }
+
+    &__contenedorlogo {
+        width: 100%;
+        text-align: center;
+    }
+
+    &__logo {
+        width: 80%;
+    }
+
+    &__contenedorbanner {
+        background-size: cover;
+
+        height: 85vh;
+        width: auto;
+        background-position: center;
+        border-style: solid;
+        border-color: lightslategray;
+        border-width: 1px;
+    }
+
+    &__banner {
+        display: none;
+    }
 }
 
-.header__barra__text {
-    font-size: 15px;
-    color: white;
-    text-align: center;
-}
-
-.header__contenedorlogo {
-    width: 100%;
-    text-align: center;
-}
-
-.header__contenedorlogo__logo {
-    width: 80%;
-}
 
 .banner {
     display: none;
 }
 
-.header__bannerindex {
+.index {
     background-image: url("../img/banner_indexmobile.jpg");
-    background-size: cover;
-
-    height: 85vh;
-    width: auto;
-    background-position: center;
-    border-style: solid;
-    border-color: lightslategray;
-    border-width: 1px;
 }
 
-.header__bannermujeres {
+.mujeres {
     background-image: url("../img/banner_mujermobile.jpg");
-    background-size: cover;
-
-    height: 85vh;
-    width: auto;
-    background-position: center;
-    border-style: solid;
-    border-color: lightslategray;
-    border-width: 1px;
 }
 
-.header__bannerhombres {
+.hombres {
 
     background-image: url("../img/banner_hombremobile.jpg");
-    background-size: cover;
-
-    height: 85vh;
-    width: auto;
-    background-position: center;
-    border-style: solid;
-    border-color: lightslategray;
-    border-width: 1px;
 }
 
-.header__bannerniños {
+.niños {
     background-image: url("../img/banner_niñosmobile.jpg");
-    background-size: cover;
-
-    height: 85vh;
-    width: auto;
-    background-position: center;
-    border-style: solid;
-    border-color: lightslategray;
-    border-width: 1px;
 }
 
-.header__bannercontactanos {
+.contactanos {
     background-image: url("../img/banner_contactanosmobile.jpg");
-    background-size: cover;
-
-    height: 85vh;
-    width: auto;
-    background-position: center;
-    border-style: solid;
-    border-color: lightslategray;
-    border-width: 1px;
 }
 
 
@@ -162,6 +140,9 @@ body {
     height: 360px;
     margin-top: 10px;
     margin-bottom: 10px;
+    -webkit-box-shadow: 10px 10px 5px -3px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px -3px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 5px -3px rgba(0,0,0,0.75);
 }
 
 .card_img {
@@ -241,7 +222,7 @@ body {
         "n n n n n n n n n n n n";
 }
 
-.header__barra{
+.header__barra {
     grid-area: b;
 }
 
@@ -273,7 +254,7 @@ nav {
     grid-template-areas: ". ti ti ti ti ti ti ti ti ti ti ."
         ". . te te te te te te te te . ."
         ". . . . . li li . . . . . "
-        "if if if if if if if if if if if if ";
+        ". if if if if if if if if if if . ";
 }
 
 .quienes_titulo {
@@ -297,36 +278,24 @@ nav {
     grid-area: f;
 }
 
-
+.barranav{
+    background: linear-gradient($color1, $color2);
+}
 
 @media only screen and (min-width: 991px) {
-    .header__contenedorlogo__logo {
-        width: 40%;
-    }
+    .header {
+        &__logo {
+            width: 40%;
+        }
 
-    .banner {
-        display: block;
-        width: 100%;
-    }
+        &__banner {
+            display: block;
+            width: 100%;
+        }
 
-    .header__bannerhombres {
-        height: auto;
-    }
-
-    .header__bannerindex {
-        height: auto;
-    }
-
-    .header__bannermujeres {
-        height: auto;
-    }
-
-    .header__bannerniños {
-        height: auto;
-    }
-
-    .header__bannercontactanos {
-        height: auto;
+        &__contenedorbanner {
+            height: auto;
+        }
     }
 
     .contenedor_tarjetas {
